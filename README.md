@@ -44,6 +44,14 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### Crea el usuario administrador
+
+Ejecuta el siguiente comando para crear el usuario, y sigue las instrucciones dadas:
+
+```bash
+python manage.py createsuperuser
+```
+
 ### Ejecución del servidor de desarrollo
 
 Para iniciar el servidor de desarrollo, ejecuta:
