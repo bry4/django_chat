@@ -1,7 +1,5 @@
 # Chat Project
 
-Este es un proyecto simple de chat utilizando Django y PostgreSQL.
-
 ## Configuración del proyecto
 
 Para ejecutar este proyecto en tu entorno local, sigue los siguientes pasos:
