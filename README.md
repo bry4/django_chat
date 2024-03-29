@@ -18,7 +18,7 @@ Primero, clona el repositorio en tu máquina local y cambia al directorio del pr
 
 ```bash
 git clone https://github.com/bry4/django_chat.git
-cd prj_chat
+cd django_chat
 ```
 
 Instala las dependencias necesarias utilizando `pip`:
