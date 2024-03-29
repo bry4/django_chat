@@ -1,0 +1,17 @@
+{% extends 'app_chat/base.html' %}
+
+{% block content %}
+<div class="conversacion">
+    {% for mensaje in mensajes %}
+        <p><strong>{{ mensaje.autor.username }}:</strong> {{ mensaje.mensaje }} <em>{{ mensaje.fecha_hora }}</em></p>
+    {% endfor %}
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <textarea name="mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+</form>
+
+<a href="{% url 'chat' %}">Volver a chats</a>
+{% endblock %}

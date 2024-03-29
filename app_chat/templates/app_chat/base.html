@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Aplicación Django{% endblock %}</title>
+    <link rel="stylesheet" href="{% block stylesheet %}{% endblock %}">
+    <!-- Puedes incluir más archivos CSS o JS específicos aquí -->
+</head>
+<body>
+    <header>
+        <!-- Contenido del header como la barra de navegación -->
+    </header>
+    
+    <main>
+        {% block content %}
+        <!-- El contenido de cada página extendida irá aquí -->
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <!-- Contenido del footer -->
+    </footer>
+</body>
+</html>
