@@ -37,6 +37,22 @@ Levanta el servicio de PostgreSQL utilizando Docker Compose:
 docker compose up -d
 ```
 
+[En caso uses una BD postgres existente]
+Debes configurar la conexion en prj_chat/settings.py con tus credenciales
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_chat',
+        'USER': 'user_chat',
+        'PASSWORD': 'password_chat',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
 Realiza las migraciones necesarias para preparar tu base de datos:
 
 ```bash
@@ -61,6 +77,10 @@ python manage.py runserver
 ```
 
 Ahora podrás acceder a la aplicación de chat en:
-`http://localhost:8000/admin` - Para administrar usuarios
-`http://localhost:8000/login` - Para ingresar al chat
+
+Para administrar usuarios, ingresas con tu superuser y creas nuevos usuarios
+`http://localhost:8000/admin`
+
+Para ingresar al login y luego al chat
+`http://localhost:8000/`
 

@@ -1,15 +1,20 @@
 {% extends 'app_chat/base.html' %}
 
 {% block content %}
-<h2>Chat</h2>
-<div>
-    <h3>Usuarios:</h3>
-    {% for usuario in usuarios %}
-        <form method="post">
-            {% csrf_token %}
-            <input type="hidden" name="usuario_id" value="{{ usuario.id }}">
-            <button type="submit">{{ usuario.username }}</button>
-        </form>
-    {% endfor %}
+<div class="chat-container">
+    <h2>Chat</h2>
+    <div class="logout">
+        <a href="{% url 'logout' %}" class="btn btn-warning">Cerrar Sesión</a>
+    </div>
+    <div class="user-list">
+        <h3>Usuarios:</h3>
+        {% for usuario in usuarios %}
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="usuario_id" value="{{ usuario.id }}">
+                <button type="submit" class="btn btn-primary">{{ usuario.username }}</button>
+            </form>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
